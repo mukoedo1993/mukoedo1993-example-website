@@ -5,4 +5,4 @@ github webpage server requires us to build in a folder named docs, rather than d
 
 
 link:
-https://mukoedo1993.github.io/travel-site-sample/
+https://stupefied-spence-c25693.netlify.app/
