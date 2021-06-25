@@ -15,7 +15,8 @@
 // to test the data a user sent to a URL...
 // different results ->different responses
 
-//COURSE 66TH AND 67TH!!!!!!!!!!!!!!!!!!!!1
+//COURSE 66TH AND 67TH!!!!!!!!!!!!!!!!!!!!
+//postman needed
 
 exports.handler = function(event, context, callback) {
     const secretContent =

@@ -1,0 +1,15 @@
+.client-area {
+    padding: 13px;
+
+    &__form {
+        display: flex;
+    }
+
+    &__input {
+        flex:1; /*So this part will take over all available extra spaces.*/
+    }
+
+    &__error {
+        color: red;
+    }
+}

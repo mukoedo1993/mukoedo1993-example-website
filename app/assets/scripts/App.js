@@ -13,7 +13,9 @@ import StickyHeader from './modules/StickyHeader'
 
 //import Modal from './modules/Modal' //commented in course 57
 
+import ClientArea from './modules/ClientArea'
 
+new ClientArea()
 
 //new Modal() //course 56 //commented in course 57
 //let stickyHeader = //commented in course 57
