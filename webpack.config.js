@@ -60,7 +60,19 @@ let config = {
   plugins: pages,//course 62nd
   module: {
     rules: [
-      cssConfig
+      cssConfig,
+
+      //add a rule only works for JS file.
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/, //ignore the node module folder
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react','@babel/preset-env'] //It is an array that could have multiple presets.
+          }
+        }
+      }
     ]
   }
 }
@@ -84,16 +96,7 @@ if (currentTask == 'dev') {
 }
 
 if (currentTask == 'build') {
-  config.module.rules.push({
-    test: /\.js$/,
-    exclude: /(node_modules)/, //ignore the node module folder
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env']
-      }
-    }
-  })
+ 
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   config.output = {

@@ -15,6 +15,19 @@ import StickyHeader from './modules/StickyHeader'
 
 import ClientArea from './modules/ClientArea'
 
+// React Related Code Goes Here
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+//import React components that we created
+import MyAmazingComponent from './modules/MyAmazingComponent'
+
+
+ReactDOM.render(<MyAmazingComponent />, document.querySelector("#my-react-example")) //first parentheses is the component (reusable feature) you want to render to the page. 
+// it is the part you want to render to...
+
+
+
 new ClientArea()
 
 //new Modal() //course 56 //commented in course 57

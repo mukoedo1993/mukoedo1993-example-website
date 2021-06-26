@@ -1,0 +1,48 @@
+CORS Solution (Test Cloud Function from Localhost)
+Hello everyone, if you'd like to be able to test the Client Area feature from your localhost:3000 preview, simply modify your Cloud Function file named secret-area.js to look like this instead:
+
+exports.handler = function(event, context, callback) {
+  const headers = {
+    "Access-Control-Allow-Origin" : "*",
+    "Access-Control-Allow-Headers" : "Content-Type"
+  }
+ 
+  if (event.httpMethod !== "POST") {
+    return callback(null, {
+      statusCode: 200,
+      headers,
+      body: "This was not a POST request"
+    })
+  }
+  
+  const secretContent = `
+  <h3>Welcome To The Secret Area</h3>
+  <p>Here we can tell you that the sky is <strong>blue</strong>, and two plus two equals four.</p>
+  `
+  
+  let body
+ 
+  if (event.body) {
+    body = JSON.parse(event.body)
+  } else {
+    body = {}
+  }
+ 
+  if (body.password == "javascript") {
+    callback(null, {
+      statusCode: 200,
+      headers,
+      body: secretContent
+    })
+  } else {
+    callback(null, {
+      statusCode: 401,
+      headers
+    })
+  }
+ 
+  
+}
+If you'd like to learn more about the topic of CORS I always recommend the Mozilla Developer Network.
+
+The actual solution to this issue is to use Netlify Dev. If you're interested in the Netlify platform it's definitely worth looking into.
