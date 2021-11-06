@@ -59,7 +59,7 @@ class Modal {
           </div>
     
           <div class="social-icons">
-            <a href="github.com/mukoedo1993" class="social-icons__icon"><img src="assets/images/icons/github.svg" alt="Github"></a>
+            <a href="https://github.com/mukoedo1993" class="social-icons__icon"><img src="assets/images/icons/github.svg" alt="Github"></a>
             <a href="https://stackexchange.com/users/17707101/z-hwong?tab=accounts" class="social-icons__icon"><img src="assets/images/icons/stack-overflow.svg" alt="Stack-Overflow"></a>
           </div>
         </div>
