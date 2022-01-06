@@ -37,7 +37,7 @@ class RunAfterCompile{
 }
 
 let cssConfig = {
-  test: /\.css$/i,
+  test: /\.css$/i,    //case insensitive
   use: ["css-loader?url=false", { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }]
 }
 
