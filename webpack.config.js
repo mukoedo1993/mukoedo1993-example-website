@@ -34,6 +34,13 @@ const postCSSPlugins = [
   require('autoprefixer')
 ]
 
+
+
+//https://webpack.js.org/contribute/writing-a-plugin/
+/*
+It is a class following basic plugin architecture, which contains only an apply function.
+And we need to push it in the final plugins property.
+*/
 class RunAfterCompile{
   /*copy images... course 63rd*/
   //https://webpack.js.org/api/compiler-hooks/#done
