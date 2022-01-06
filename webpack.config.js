@@ -36,6 +36,10 @@ const postCSSPlugins = [
 
 class RunAfterCompile{
   /*copy images... course 63rd*/
+  //https://webpack.js.org/api/compiler-hooks/#done
+  /*
+  Executed when the compilation has completed. This hook is not copied to child compilers.
+  */
   apply(compiler) {
     compiler.hooks.done.tap('Copy images', function() {
       fse.copySync('./app/assets/images', './docs/assets/images') //copy files from the lhs parameter folder to the rhs parameter
