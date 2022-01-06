@@ -5,12 +5,20 @@
 //The part above is very important. 
 
 
-const currentTask = process.env.npm_lifecycle_event
-const path = require('path')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin') // course 62nd
+const currentTask = process.env.npm_lifecycle_event //  the npm_lifecycle_event environment variable is set to whichever stage of the cycle is being executed. 
+//https://docs.npmjs.com/cli/v8/using-npm/scripts
+const path = require('path') //The path module provides utilities for working with file and directory paths. 
+//https://nodejs.org/api/path.html
+const {CleanWebpackPlugin} = require('clean-webpack-plugin') //A webpack plugin to remove/clean your build folder(s).
+//https://github.com/johnagan/clean-webpack-plugin
+const MiniCssExtractPlugin = require('mini-css-extract-plugin') //https://webpack.js.org/plugins/mini-css-extract-plugin/
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin') //https://webpack.js.org/plugins/css-minimizer-webpack-plugin/#root
+const HtmlWebpackPlugin = require('html-webpack-plugin') //https://webpack.js.org/plugins/html-webpack-plugin/#root
+/*
+The plugin will generate an HTML5 file for you that includes all your webpack bundles in the body using script tags.
+*/
+// course 62nd
+
 const fse = require('fs-extra') // let's leverage this package to search for any HTML file. course 63rd
 
 const postCSSPlugins = [
