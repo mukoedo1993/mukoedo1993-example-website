@@ -69,7 +69,11 @@ let config = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react','@babel/preset-env'] //It is an array that could have multiple presets.
+            presets: ['@babel/preset-react'   //react part
+                      //https://babeljs.io/docs/en/babel-preset-react
+                      ,'@babel/preset-env']  //To transpile ES6 to backward-compatible files.
+            //https://webpack.js.org/loaders/babel-loader/
+            //It is an array that could have multiple presets.
           }
         }
       }
