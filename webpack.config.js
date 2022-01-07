@@ -92,7 +92,7 @@ const javascriptConfig =
         }
       }
 
-let config = {
+const config = {
   entry: './app/assets/scripts/App.js',
   plugins: pages,//course 62nd
   module: {
@@ -112,7 +112,7 @@ if (currentTask == 'dev') {
     before: function(app, server) {
       server._watch('./app/**/*.html')
     },
-    contentBase: path.join(__dirname, 'app'),
+    contentBase: path.join(__dirname, 'app'), //tell the server where to serve content from.
     hot: true,
     port: 3000,
     host: '0.0.0.0'
