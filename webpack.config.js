@@ -55,12 +55,12 @@ class RunAfterCompile{
   }
 }
 
-let cssConfig = {
+const cssConfig = {
   test: /\.css$/i,    //case insensitive
   use: ["css-loader?url=false", { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }]
 }
 
-let pages = fse.readdirSync('./app').filter( function(file) {
+const pages = fse.readdirSync('./app').filter( function(file) {
   return file.endsWith('.html')
 }).map(function(page) {
   return new HtmlWebpackPlugin({
@@ -74,13 +74,8 @@ map will generate a new array in this array.
 we want an array with multiple html file names.
 */
 
-let config = {
-  entry: './app/assets/scripts/App.js',
-  plugins: pages,//course 62nd
-  module: {
-    rules: [
-      cssConfig,
 
+const javascriptConfig =
       //add a rule only works for JS file.
       {
         test: /\.js$/,
@@ -96,7 +91,12 @@ let config = {
           }
         }
       }
-    ]
+
+let config = {
+  entry: './app/assets/scripts/App.js',
+  plugins: pages,//course 62nd
+  module: {
+    rules: [cssConfig, javascriptConfig]
   }
 }
 
@@ -106,6 +106,8 @@ if (currentTask == 'dev') {
     filename: 'bundled.js',
     path: path.resolve(__dirname, 'app')
   }
+  //By default, the dev-server will reload/refresh the page when file changes are detected.
+  //hot be true or watchFiles must be set.
   config.devServer = {
     before: function(app, server) {
       server._watch('./app/**/*.html')
