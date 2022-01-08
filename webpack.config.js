@@ -4,7 +4,7 @@
 
 //The part above is very important. 
 
-
+const webpack = require('webpack')
 const currentTask = process.env.npm_lifecycle_event //  the npm_lifecycle_event environment variable is set to whichever stage of the cycle is being executed. 
 //https://docs.npmjs.com/cli/v8/using-npm/scripts
 const path = require('path') //The path module provides utilities for working with file and directory paths. 
@@ -74,6 +74,8 @@ map will generate a new array in this array.
 we want an array with multiple html file names.
 */
 
+pages.push(new webpack.HotModuleReplacementPlugin())  //To fully enable hot replacement
+
 
 const javascriptConfig =
       //add a rule only works for JS file.
@@ -109,11 +111,18 @@ if (currentTask == 'dev') {
   //By default, the dev-server will reload/refresh the page when file changes are detected.
   //hot be true or watchFiles must be set.
   config.devServer = {
+
+    /*
+    before:
+    Provides the ability to execute custom middleware prior to all other
+     middleware internally within the server. This could be used to define custom handlers,
+    */
     before: function(app, server) {
       server._watch('./app/**/*.html')
     },
     contentBase: path.join(__dirname, 'app'), //tell the server where to serve content from.
-    hot: true,
+    //The path.join() method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path.
+    hot: true, 
     port: 3000,
     host: '0.0.0.0'
   }
@@ -137,7 +146,7 @@ if (currentTask == 'build') {
   }
 
   config.plugins.push(new CleanWebpackPlugin(), new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),
-                      new RunAfterCompile()
+                       new RunAfterCompile()
   )
 }
 
