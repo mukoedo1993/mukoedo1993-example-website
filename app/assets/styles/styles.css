@@ -8,6 +8,8 @@
 
 @import "base/_global";
 
+@import "modules/_higurashi.css";
+
 @import "modules/_large-hero"; 
 
 /* import import file at the top of your file not down of the bottom.*/
