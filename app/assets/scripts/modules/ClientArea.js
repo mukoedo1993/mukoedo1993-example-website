@@ -32,14 +32,10 @@ class ClientArea {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
             // area div.
             this.form.remove() // remove(): remove node
-            this.contentArea.innerHTML = response.data
 
         }).catch(
-            () => {
-                this.contentArea.innerHTML = `<p class="client-area__error"> That secret phrase is not correct. Try again.</p>`
-
-                this.form.value = ''
-                this.form.focus()
+            (err) => {
+              console.log(err)  
             })
         // post... a promise: we don't know how long it will take.
         //then(): function if everything is well
