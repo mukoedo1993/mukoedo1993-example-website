@@ -32,8 +32,6 @@ class ClientArea {
         Axios.post('https://stupefied-spence-c25693.netlify.app/.netlify/functions/secret-area', {password: this.form}).then(response => {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
             // area div.
-            this.form.remove() // remove(): remove node
-
         }).catch(
             (err) => {
               console.log(err)  
