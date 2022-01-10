@@ -14,7 +14,7 @@
     left: 0;
     right: 0;
 
-
+    color: $aubergine;
     background-color: rgba(255, 255, 255, .94);
 
     z-index:5;
@@ -51,7 +51,7 @@
         transform: scaleX(1.2);
         transform-origin: 100% 0;
         cursor: pointer; /*So it looks like a link when you hover over it...*/
-        color: $mainblue;
+        color: $teal;
 
         &:hover {
             color: $mainOrange;
