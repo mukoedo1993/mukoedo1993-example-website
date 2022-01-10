@@ -10,6 +10,8 @@ class ClientArea {
 
         this.submitButton = document.querySelector(".js-btn--orange-submit")
 
+        this.contentArea =document.querySelector(".client-area__content-area")
+
         this.events()
     }
 
@@ -31,6 +33,7 @@ class ClientArea {
 
         Axios.post('https://stupefied-spence-c25693.netlify.app/.netlify/functions/secret-area', {password: this.form}).then(response => {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
+            this.contentArea.innerHTML = response.data
             // area div.
         }).catch(
             (err) => {
