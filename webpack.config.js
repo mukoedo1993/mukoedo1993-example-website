@@ -22,7 +22,7 @@ The plugin will generate an HTML5 file for you that includes all your webpack bu
 const fse = require('fs-extra') // let's leverage this package to search for any HTML file. course 63rd
 
 const postCSSPlugins = [
-  require('postcss-import'),
+  require('postcss-import'),  //@import feature
   require('postcss-mixins'),
   require('postcss-simple-vars'),
   require('postcss-nested'),
