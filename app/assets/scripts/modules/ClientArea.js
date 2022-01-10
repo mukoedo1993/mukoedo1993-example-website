@@ -3,9 +3,9 @@ import Axios from 'axios'
 class ClientArea {
     constructor(){
         this.injectHTML()
-        this.form = document.querySelector(".client-area__form")
+        this.form = Array.from(document.getElementsByName("genderS")).find(r => r.checked).value;
         //querySelector: Returns the first element that is a descendant of node that matches selectors.
-
+        
         this.field = document.querySelector(".client-area__radios")
 
         this.contentArea = document.querySelector(".client-area__content-area")
@@ -26,6 +26,8 @@ class ClientArea {
 
     sendRequest() {// post(target url, password object)
         // because of cross network resource sharing, this network process will not work through.
+        console.log(this.form)
+
         Axios.post('https://stupefied-spence-c25693.netlify.app/.netlify/functions/secret-area', {password: this.form.value}).then(response => {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
             // area div.
@@ -63,8 +65,8 @@ class ClientArea {
 </div>
 
 <div>
-  <input type="radio" id="scarlet" name="drone" value="scarlet">
-  <label for="louie">Scarlet</label>
+  <input type="radio" id="scarlet" name="sky" value="scarlet">
+  <label for="scarlet">Scarlet</label>
 </div>
     <button class="btn btn--orange">Submit</button>
   </form>
