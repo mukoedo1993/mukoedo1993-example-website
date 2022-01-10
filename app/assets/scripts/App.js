@@ -4,6 +4,7 @@ import '../styles/styles.css'
 
 import 'lazysizes'
 
+import { Markup } from 'interweave';
 
 import MobileMenu from './modules/MobileMenu'
 
@@ -20,13 +21,27 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 //import React components that we created
-import MyAmazingComponent from './modules/MyAmazingComponent'
+import CopyRight from './modules/CopyRight'
+import FeatureItem from './modules/React/FeatureItem'
 
 
-ReactDOM.render(<MyAmazingComponent />, document.querySelector("#my-react-example")) //first parentheses is the component (reusable feature) you want to render to the page. 
 // it is the part you want to render to...
+ReactDOM.render(<CopyRight />, document.querySelector("#copy-right")) //render current year
 
+//render feature-item one by one: 
+// first one: upper-left:
+let featureItems = document.querySelectorAll(".feature-item")
+const content_1st_item = `You can search and read our university's events, notifications, take notes and
+              interact with our professors. And, if you love animals, you could even check our university's pet system.
+               Please <a href="https://mukoedo.com" class="umineko">explore!</a>`
+ReactDOM.render(<FeatureItem src="assets/images/icons/university.svg" title="A fictional University" content={content_1st_item}/>, featureItems[0])
 
+// second one: 
+const content_2nd_item = `We&rsquo;ve scoured the entire planet for the best retreats and beautiful
+vistas. If there&rsquo;s a
+corner of
+the world you want to escape to we know the most scenic and inspiring locations.`
+ReactDOM.render(<FeatureItem src="assets/images/icons/globe.svg" title="Global Guides" content={content_2nd_item}/>, featureItems[1])
 
 new ClientArea()
 

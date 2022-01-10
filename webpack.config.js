@@ -105,15 +105,16 @@ const config = {
 if (currentTask == 'dev') {
   cssConfig.use.unshift('style-loader')
   config.output = {
-    filename: 'bundled.js',
+    filename: 'bundled.js', //This file will be included in the index.html file.
     path: path.resolve(__dirname, 'app')
   }
   //By default, the dev-server will reload/refresh the page when file changes are detected.
-  //hot be true or watchFiles must be set.
-  config.devServer = {
+  //hot be true or watchFiles must be set. 
+  config.devServer = {  //With devServer, we no longer need watch:true to be explicitly set again.
 
     /*
     before:
+    If any change happens in these supervised files, our browser will experience a full reload.
     Provides the ability to execute custom middleware prior to all other
      middleware internally within the server. This could be used to define custom handlers,
     */
