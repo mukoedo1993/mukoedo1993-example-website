@@ -26,9 +26,10 @@ class ClientArea {
 
     sendRequest() {// post(target url, password object)
         // because of cross network resource sharing, this network process will not work through.
+        this.form = Array.from(document.getElementsByName("sky")).find(r => r.checked).value;
         console.log(this.form)
 
-        Axios.post('https://stupefied-spence-c25693.netlify.app/.netlify/functions/secret-area', {password: this.form.value}).then(response => {
+        Axios.post('https://stupefied-spence-c25693.netlify.app/.netlify/functions/secret-area', {password: this.form}).then(response => {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
             // area div.
             this.form.remove() // remove(): remove node
@@ -48,7 +49,7 @@ class ClientArea {
 <div class="client-area">
 <div class="wrapper wrapper--medium">
   <h2 class="section-title section-title--blue">What is the most common sky color in LA?</h2>
-  <form class="client-area__form" action="">
+  <form class="client-area__form" action="" method="POST">
   <div>
   <input type="radio" id="blue" name="sky" value="blue"
          checked>
