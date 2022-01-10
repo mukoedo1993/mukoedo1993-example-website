@@ -25,23 +25,46 @@ import CopyRight from './modules/CopyRight'
 import FeatureItem from './modules/React/FeatureItem'
 
 
-// it is the part you want to render to...
+/*
+* Render the copyright part.
+*/
 ReactDOM.render(<CopyRight />, document.querySelector("#copy-right")) //render current year
 
-//render feature-item one by one: 
+/*
+*
+* render feature-item one by one: Here we have four features:
+*/
+const icon_dir = "assets/images/icons/"
+
 // first one: upper-left:
 let featureItems = document.querySelectorAll(".feature-item")
-const content_1st_item = `You can search and read our university's events, notifications, take notes and
+const content_of_1st_feature_item = `You can search and read our university's events, notifications, take notes and
               interact with our professors. And, if you love animals, you could even check our university's pet system.
                Please <a href="https://mukoedo.com" class="umineko">explore!</a>`
-ReactDOM.render(<FeatureItem src="assets/images/icons/university.svg" title="A fictional University" content={content_1st_item}/>, featureItems[0])
+const title_of_1st_feature_item = "A fictional university"
+const src_of_1st_feature_item = icon_dir + "university.svg"
+ReactDOM.render(<FeatureItem src={src_of_1st_feature_item} title={title_of_1st_feature_item} content={content_of_1st_feature_item}/>, featureItems[0])
 
-// second one: 
-const content_2nd_item = `We&rsquo;ve scoured the entire planet for the best retreats and beautiful
-vistas. If there&rsquo;s a
-corner of
-the world you want to escape to we know the most scenic and inspiring locations.`
-ReactDOM.render(<FeatureItem src="assets/images/icons/globe.svg" title="Global Guides" content={content_2nd_item}/>, featureItems[1])
+// second one: upper-right:
+const content_2nd_item = `We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the world you want to escape to we know the most scenic and inspiring locations. We want you to enjoy it.`
+const title_of_2nd_feature_item = "Global Guides"
+const src_of_2nd_feature_item = icon_dir + "globe.svg"
+ReactDOM.render(<FeatureItem src={src_of_2nd_feature_item} title={title_of_2nd_feature_item} content={content_2nd_item}/>, featureItems[1])
+
+// third one: lower-left:
+const content_3rd_item =
+`We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.`
+const title_of_3rd_feature_item = "Wi-Fi Waypoints"
+const src_of_3rd_feature_item = icon_dir + "wifi.svg"
+ReactDOM.render(<FeatureItem src={src_of_3rd_feature_item} title={title_of_3rd_feature_item} content={content_3rd_item}/>, featureItems[2])
+
+// fourth one: lower-right: 
+// third one: lower-left:
+const content_4th_item = 
+`Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow youto setup a tent, start a fire, scratch your own back and lower your taxes.`
+const title_of_4th_feature_item = "Survival Kit"
+const src_of_4th_feature_item = icon_dir + "fire.svg"
+ReactDOM.render(<FeatureItem src={src_of_4th_feature_item} title={title_of_4th_feature_item} content={content_4th_item}/>, featureItems[3])
 
 new ClientArea()
 
