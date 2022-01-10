@@ -3,7 +3,7 @@ import Axios from 'axios'
 class ClientArea {
     constructor(){
         this.injectHTML()
-        this.form = Array.from(document.getElementsByName("genderS")).find(r => r.checked).value;
+        this.form = Array.from(document.getElementsByName("sky")).find(r => r.checked).value;
         //querySelector: Returns the first element that is a descendant of node that matches selectors.
         
         this.field = document.querySelector(".client-area__radios")
