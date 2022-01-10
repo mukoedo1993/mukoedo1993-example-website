@@ -8,7 +8,7 @@ class ClientArea {
         
         this.field = document.querySelector(".client-area__radios")
 
-        this.contentArea = document.querySelector(".client-area__content-area")
+        this.submitButton = document.querySelector(".js-btn--orange-submit")
 
         this.events()
     }
@@ -16,7 +16,7 @@ class ClientArea {
 
     events() {
         //listen for HTML form to be submitted
-        this.form.addEventListener("submit", e=> {
+        this.submitButton.addEventListener("click", e=> {
             e.preventDefault()// prevent the browser from full reload and refresh
             // Use JS to deal with the form being submitted...
 
@@ -68,7 +68,7 @@ class ClientArea {
   <input type="radio" id="scarlet" name="sky" value="scarlet">
   <label for="scarlet">Scarlet</label>
 </div>
-    <button class="btn btn--orange">Submit</button>
+    <button class="btn btn--orange js-btn--orange-submit">Submit</button>
   </form>
   <div class="client-area__content-area"></div>
 </div>
