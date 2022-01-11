@@ -6,7 +6,8 @@ class ClientArea {
         this.form = Array.from(document.getElementsByName("sky")).find(r => r.checked).value;
         //querySelector: Returns the first element that is a descendant of node that matches selectors.
         
-        this.field = document.querySelector(".client-area__radios")
+        this.FormToDelete = document.querySelector("form")
+        this.ButtonToDelete = document.querySelector(".js-btn--orange-to-be-deleted")
 
         this.submitButton = document.querySelector(".js-btn--orange-submit")
 
@@ -35,6 +36,8 @@ class ClientArea {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
             console.log(response.data)
             this.contentArea.innerHTML = response.data
+            this.FormToDelete.remove()
+            this.ButtonToDelete.remove()
             // area div.
         }).catch(
             (err) => {
@@ -69,7 +72,7 @@ class ClientArea {
 </div><br>
     
   </form>
-  <button class="btn btn--orange js-btn--orange-submit">Submit</button>
+  <button class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted">Submit</button>
   <div class="client-area__content-area"></div>
 </div>
 </div>
