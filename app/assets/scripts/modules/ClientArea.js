@@ -52,23 +52,24 @@ class ClientArea {
 <div class="wrapper wrapper--medium">
   <h2 class="section-title section-title--blue">What is the most common sky color in LA?</h2>
   <form class="client-area__form" action="" method="POST">
-  <div>
+  <div class="client-area__input">
   <input type="radio" id="blue" name="sky" value="blue"
          checked>
   <label for="blue">Blue</label>
 </div>
 
-<div>
+<div class="client-area__input">
   <input type="radio" id="teal" name="sky" value="teal">
   <label for="teal">Teal</label>
 </div>
 
-<div>
+<div class="client-area__input">
   <input type="radio" id="scarlet" name="sky" value="scarlet">
   <label for="scarlet">Scarlet</label>
-</div>
-    <button class="btn btn--orange js-btn--orange-submit">Submit</button>
+</div><br>
+    
   </form>
+  <button class="btn btn--orange js-btn--orange-submit">Submit</button>
   <div class="client-area__content-area"></div>
 </div>
 </div>

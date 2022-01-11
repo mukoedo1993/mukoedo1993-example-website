@@ -20,3 +20,10 @@
         }
     }
 }
+
+.js-btn--orange-submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.675rem;
+}

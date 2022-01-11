@@ -3,13 +3,24 @@
 
     &__form {
         display: flex;
+        text-align: center;
     }
 
     &__input {
         flex:1; /*So this part will take over all available extra spaces.*/
+        text-align: center;
     }
 
     &__error {
         color: red;
     }
+
+    &__content_area {
+        color: $aubergine;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:0.5rem;
+        margin-bottom: 0.5rem;
+    }
 }
+

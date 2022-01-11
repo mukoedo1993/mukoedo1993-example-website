@@ -20,8 +20,8 @@
 
 exports.handler = function(event, context, callback) {
     const secretContent =
-    `<h3>Welcome To The Secret Area</h3>
-    <p> You are right. LA is a city that is usually <strong>SUNNY!</strong> </p>
+    `<h3 class="client-area__content_area">Welcome To The Secret Area</h3>
+    <p class="client-area__content_area"> You are right. LA is a city that is usually <strong>SUNNY!</strong> </p>
     ` 
     let body
 
