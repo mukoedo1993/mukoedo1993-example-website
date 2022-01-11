@@ -131,7 +131,7 @@ if (currentTask == 'dev') {
 }
 
 if (currentTask == 'build') {
- 
+  console.log = function() {}
 
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   config.output = {
