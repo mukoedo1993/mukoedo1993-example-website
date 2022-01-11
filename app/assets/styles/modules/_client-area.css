@@ -16,11 +16,19 @@
     }
 
     &__content_area {
-        color: $aubergine;
-        margin-left:auto;
-        margin-right:auto;
-        margin-top:0.5rem;
-        margin-bottom: 0.5rem;
+      
+        &_h3{
+            text-align: center;
+            color: $aubergine;
+            margin-top:0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        &_p {
+            text-align:center;
+            color: $teal;
+            margin-top:0.5rem;
+            margin-bottom: 0.5rem;
+        }
     }
 }
 
