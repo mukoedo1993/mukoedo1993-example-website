@@ -45,24 +45,24 @@ const title_of_1st_feature_item = "A fictional university"
 const src_of_1st_feature_item = icon_dir + "university.svg"
 ReactDOM.render(<FeatureItem src={src_of_1st_feature_item} title={title_of_1st_feature_item} content={content_of_1st_feature_item}/>, featureItems[0])
 
-// second one: upper-right:
-const content_2nd_item = `We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the world you want to escape to we know the most scenic and inspiring locations. We want you to enjoy it.`
-const title_of_2nd_feature_item = "Global Guides"
+// second one: lower-left:
+const content_2nd_item = `I have learnt some easy-to-use opencv tools in C++ language, such as a canvas, a nameplate detector and a simple file cropper.`
+const title_of_2nd_feature_item = "OpenCV"
 const src_of_2nd_feature_item = icon_dir + "globe.svg"
 ReactDOM.render(<FeatureItem src={src_of_2nd_feature_item} title={title_of_2nd_feature_item} content={content_2nd_item}/>, featureItems[1])
 
 // third one: lower-left:
 const content_3rd_item =
-`We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.`
-const title_of_3rd_feature_item = "Wi-Fi Waypoints"
+`I also have contributed to a popular <a href="https://en.wikipedia.org/wiki/DBSCAN" class="umineko">DBSCAN </a>library in <a href="https://github.com/james-yoo/DBSCAN" class="umineko">github</a>, which has 76 stars when I am writing this paragraph. I also developed a basic program to fetch stocks' data and a model to predict it.` 
+const title_of_3rd_feature_item = "Machine Learning"
 const src_of_3rd_feature_item = icon_dir + "wifi.svg"
 ReactDOM.render(<FeatureItem src={src_of_3rd_feature_item} title={title_of_3rd_feature_item} content={content_3rd_item}/>, featureItems[2])
 
 // fourth one: lower-right: 
 // third one: lower-left:
 const content_4th_item = 
-`Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow youto setup a tent, start a fire, scratch your own back and lower your taxes.`
-const title_of_4th_feature_item = "Survival Kit"
+`I developed a simple app for social network, named shaberu(しゃべる), which roughly means talking in Japanese. You could not only post and search, but also chat with other people here.`
+const title_of_4th_feature_item = "Shaberu"
 const src_of_4th_feature_item = icon_dir + "fire.svg"
 ReactDOM.render(<FeatureItem src={src_of_4th_feature_item} title={title_of_4th_feature_item} content={content_4th_item}/>, featureItems[3])
 

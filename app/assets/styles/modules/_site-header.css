@@ -55,7 +55,7 @@
    background-color: rgba(130, 221, 94, .55);
    /*$mainblue;*/ 
     padding         : 25px 36px;
-   
+    border-radius:  30%;
 
     @mixin atMedium {
       left     : auto;
@@ -63,7 +63,7 @@
       padding  : 25px 36px;
 
       .site-header--dark & {
-         transform: scale(.55);
+         transform: scale(.45) translateY(0.55rem);
       }
     }
 
