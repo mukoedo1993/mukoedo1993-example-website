@@ -41,6 +41,7 @@ class ClientArea {
             // area div.
         }).catch(
             (err) => {
+              this.contentArea.innerHTML = `<h1 class="client-area__error">Wrong. Try again...</h1>`
               console.log(err)  
             })
         // post... a promise: we don't know how long it will take.
