@@ -5,6 +5,8 @@
 
     &__image {
         display: block;
+        width: 100%;
+        z-index: 20;
     }
 
     &__text-content { /*equals to .large-hero__text-content 18TH COURSE
@@ -17,22 +19,35 @@
 
         /*top and transform work together to centeralize our content vertically*/
         top: 50%;
-        transform: translateY(-50%);/*push down the length of the element.*/
+        transform: translateY(-30%);/*push down the length of the element.*/
         left: 0;
         width: 100%;
         text-align: center;
+        z-index: 10;
+
+        @mixin atMedium{
+            transform: translateY(-100%);/*push down the length of the element.*/
+        }
     }
 
     /*lec 18*/
     &__title {
     font-weight: 300; 
-    color: $mainblue;
+    color: white;
     font-size: 2.4rem;
     margin: 0;
 
     @mixin atSmall {
         font-size: 2.875rem;
-        transform: translateY(38%);
+        
+       
+    }
+    @mixin atMedium {
+        transform: translateY(100%);
+    }
+
+    @mixin atLarge {
+       transform: translateY(-15%);
        
     }
 }
@@ -43,31 +58,54 @@
     font-size: 1.5rem;
     margin: 0;
 
+    @mixin atSmall{
+        transform: translateY(-5px);
+    }
+
+    @mixin atMedium {
+        transform: translateY(200%);
+    }
+
     /*atSmall is at least 530px is small*/
-    @mixin atSmall {
+    @mixin atLarge {
         font-size: 4.8rem;
+        transform: translateY(0);
+        z-index: 1999;
     }
 }
    
 
     &__description {
         font-size: 2.875 rem ;
+        transform: translateY(-1rem);
     
       @mixin atSmall {
         font-size: 1.875rem;
+        transform: translateY(-2.5rem);
     }
+
+    @mixin atMedium {
+        transform: translateY(100%);
+    }
+
+    @mixin atLarge {  
+            transform: translateY(20%);    
+    }
+        
         font-weight: 100;
+        
       
         text-shadow: 2px 2px 0 rgba(0, 0, 0, .1); /* offset x, offset y, blur-radius, color. */
         max-width: 30rem;
         padding: 0;
         margin-left: auto;
        margin-right: auto;
-       color:#FFF;
+       color:red;
     
 
     }
 
+   
 
 
 }

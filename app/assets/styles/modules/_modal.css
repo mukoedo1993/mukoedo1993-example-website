@@ -7,7 +7,6 @@
     /*end of course 56*/
 
 
-
     position: fixed;/*so, fixed will make the modal element to take the entire screen.*/
     top: 0;
     bottom: 0;
@@ -17,7 +16,8 @@
     color: $aubergine;
     background-color: rgba(255, 255, 255, .94);
 
-    z-index:5;
+    z-index:50000;
+    
 
 
     display: flex;
@@ -27,6 +27,7 @@
         opacity: 1;
         visibility: visible;
         transform: scale(1);
+        
         
     }
 

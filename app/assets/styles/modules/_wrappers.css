@@ -9,13 +9,19 @@ this wrapper is a design pattern that keeps your texts away from two horizontal 
     max-width: 1036px; /*1200px + 18px + 18px =1236px*/
     margin-left: auto;
     margin-right: auto;
-
-
+    z-index: 1999;
+    
     &--medium {
      
     max-width: 976px;
+    @mixin atLarge {
+       transform: translateX(17%);
+       
+    }
    
    }
+
+
 
 
    &--narrow {

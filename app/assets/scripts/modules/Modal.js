@@ -5,10 +5,11 @@ class Modal {
         constructor() {
             this.injectHTML()
             this.modal = document.querySelector(".modal")
+            this.htmlALL = document.querySelector("html")
             this.closeIcon = document.querySelector(".modal__close")
             //this.openModalButtons = document.querySelectorAll(".open-modal") // commented in course 57. We deal with it in App.js file.
             this.events() //The order matters. Because we need to inject HTML before we inject any javascript
-
+            
         }
 
     events() {
@@ -41,11 +42,13 @@ class Modal {
         //e.preventDefault() //e here is the event: clicking.
 
         this.modal.classList.add("modal--is-visible")
+        this.htmlALL.classList.add("body-no-scroll")
     }
 
 
     closeTheModal() {
        this.modal.classList.remove("modal--is-visible")
+       this.htmlALL.classList.remove("body-no-scroll")
     }
 
 
