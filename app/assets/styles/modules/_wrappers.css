@@ -15,7 +15,7 @@ this wrapper is a design pattern that keeps your texts away from two horizontal 
      
     max-width: 976px;
     @mixin atLarge {
-       transform: translateX(17%);
+       transform: translateX(0%);
        
     }
    
@@ -48,6 +48,7 @@ this wrapper is a design pattern that keeps your texts away from two horizontal 
        @mixin atLarge{
                 padding-left: 18px;
                 padding-right: 18px;
+                
        }
 
    }

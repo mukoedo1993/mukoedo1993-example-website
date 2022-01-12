@@ -2,7 +2,7 @@
     padding: 13px;
     text-align: center;
     @mixin atLarge {
-        transform: translateX(-10%) translateY(-20%);
+        transform: translateX(0%) translateY(-20%);
     }
 
 

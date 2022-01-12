@@ -101,11 +101,12 @@
         </strong> website, I always try my best to learn and use best and newest technologies to serve my clients.
       </h3>
 
-      <div class="wrapper wrapper--medium wrapper--b-margin">
+      <div class="wrapper wrapper--medium wrapper--b-margin lazyload">
         <!--For the screen size smaller than 970px, we do not force the browser to accept the size.-->
-        <img class="lazyload" sizes="(min-width: 970px) 975px" data-srcset="assets/images/flowers.jpg 565w,
-        assets/images/flowers.jpg 1200w,
-        assets/images/flowers.jpg 1952w" alt="Street full with flowers">
+        <picture>
+        <source srcset="assets/images/wide-flower.png" media="(min-width: 800px)">
+        <img srcset="assets/images/flowers.jpg" alt="Street full with flowers">
+        </picture>
         <!--
           But, remember, once you load a higher resolution version of an image, the browser will keep it even
           if you scale down your screen.
