@@ -9,7 +9,7 @@ class ClientArea {
         this.FormToDelete = document.querySelector("form")
         this.ButtonToDelete = document.querySelector(".js-btn--orange-to-be-deleted")
 
-        this.submitButton = document.querySelector(".js-btn--orange-submit")
+        this.submitForm = document.querySelector("#form_serverless")
 
         this.contentArea =document.querySelector(".client-area__content-area")
 
@@ -22,7 +22,7 @@ class ClientArea {
     events() {
         //listen for HTML form to be submitted
        
-        this.submitButton.addEventListener("click", e=> {
+        this.submitForm.addEventListener("submit", e=> {
          
 
             e.preventDefault()// prevent the browser from full reload and refresh
@@ -61,26 +61,29 @@ class ClientArea {
 <div class="client-area">
 <div class="wrapper wrapper--medium">
   <h2 class="section-title section-title--blue">What is the most common sky color in LA?</h2>
-  <form class="client-area__form" action="" method="POST">
-  <div class="client-area__input">
-  <input type="radio" id="blue" name="sky" value="blue">
-  <label for="blue">Blue</label>
-</div>
-
-<div class="client-area__input">
-  <input type="radio" id="teal" name="sky" value="teal">
-  <label for="teal">Teal</label>
-</div>
-
-<input type="radio" name="sky" value="default_default_" style="display:none" checked/>
-
-<div class="client-area__input">
-  <input type="radio" id="scarlet" name="sky" value="scarlet">
-  <label for="scarlet">Scarlet</label>
-</div><br>
+  <form class="client-area__form" action="" method="POST" id="form_serverless">
     
+    <div class="client-area__input">
+     <input type="radio" id="blue" name="sky" value="blue">
+     <label for="blue">Blue</label>
+    </div>
+
+    <div class="client-area__input">
+     <input type="radio" id="teal" name="sky" value="teal">
+     <label for="teal">Teal</label>
+    </div>
+
+    <input type="radio" name="sky" value="default_default_" style="display:none" checked/>
+
+    <div class="client-area__input">
+     <input type="radio" id="scarlet" name="sky" value="scarlet">
+     <label for="scarlet">Scarlet</label>
+    </div>
+    <div style="text-align:center;">
+    <input value="submit" type="submit" class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted"></button>
+    </div>
   </form>
-  <button class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted">Submit</button>
+ 
   <div class="client-area__content-area"></div>
   <div class="err" style="color: red;"></div>
 </div>
