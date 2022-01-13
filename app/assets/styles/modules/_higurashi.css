@@ -1,9 +1,6 @@
+/*The red color for higurashi when they <div style="color: red;">CRY</div>*/
 .higurashi{
-color: rgba(255, 0, 0, .56);
+color: #8f1d21;;
 text-decoration: none;
 }
 
-.umineko {
-    color: #d4953e;
-    text-decoration: none;
-}

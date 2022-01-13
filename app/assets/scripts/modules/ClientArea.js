@@ -58,7 +58,7 @@ class ClientArea {
       //Reference: https://stackoverflow.com/a/16515778/17340933
         document.body.insertAdjacentHTML('beforeend', `
         
-<div class="client-area">
+<div class="client-area" id="quiz">
 <div class="wrapper wrapper--medium">
   <h2 class="section-title section-title--blue">What is the most common sky color in LA?</h2>
   <form class="client-area__form" action="" method="POST" id="form_serverless">

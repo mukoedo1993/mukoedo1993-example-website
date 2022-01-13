@@ -59,7 +59,10 @@ this wrapper is a design pattern that keeps your texts away from two horizontal 
         padding-left: 0;
         padding-right: 0;
     }
-     
+     --b-margin {
+         padding-bottom: 1rem;
+        
+     }
   
    
           

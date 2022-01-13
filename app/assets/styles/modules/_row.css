@@ -20,6 +20,7 @@
 
    @mixin atMedium {
     display: grid;
+    margin-top: 1.875rem;
     grid-template-columns: repeat(12, 1fr);
 
 
@@ -89,7 +90,7 @@
 
 
    @mixin atLarge {
-
+    
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     &__b-margin-until-large {
