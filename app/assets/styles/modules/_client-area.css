@@ -31,6 +31,10 @@
 
     &__error {
         color: red;
+        @mixin atLarge{
+          transform: translateY(3rem);
+          margin-bottom: 3rem;
+        }
     }
 
     &__content_area {
