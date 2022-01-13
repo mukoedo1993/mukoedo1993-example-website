@@ -6,15 +6,28 @@
     }
 
 
-    &__form {
-        display: flex;
-        text-align: center;
+    &__form-inner{
+        display: grid;   
+        grid-row-gap: 5px;
+        @mixin atSmall {
+            grid-row-gap: 10px;
+        }
+        @mixin atMedium {
+            grid-row-gap: 15px;
+        }
+        @mixin atLarge{
+            grid-column-gap: 45px;
+            grid-row-gap: 10px;
+            grid-template-columns: repeat(auto-fill,minmax(250px, 1fr))
+        }
     }
 
-    &__input {
-        flex:1; /*So this part will take over all available extra spaces.*/
-        text-align: center;
+    &__input-full-wdith {
+        @mixin atLarge{
+       transform: translateX(20rem);
+        }
     }
+   
 
     &__error {
         color: red;

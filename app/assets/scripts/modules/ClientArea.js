@@ -62,7 +62,7 @@ class ClientArea {
 <div class="wrapper wrapper--medium">
   <h2 class="section-title section-title--blue">What is the most common sky color in LA?</h2>
   <form class="client-area__form" action="" method="POST" id="form_serverless">
-    
+   <div class="client-area__form-inner">
     <div class="client-area__input">
      <input type="radio" id="blue" name="sky" value="blue">
      <label for="blue">Blue</label>
@@ -79,13 +79,14 @@ class ClientArea {
      <input type="radio" id="scarlet" name="sky" value="scarlet">
      <label for="scarlet">Scarlet</label>
     </div>
-    <div style="text-align:center;">
+    <div class="client-area__input-full-wdith">
     <input value="submit" type="submit" class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted"></button>
     </div>
   </form>
  
   <div class="client-area__content-area"></div>
   <div class="err" style="color: red;"></div>
+ </div>
 </div>
 </div>
         `)
