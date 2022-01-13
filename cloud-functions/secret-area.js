@@ -18,7 +18,7 @@
 //COURSE 66TH AND 67TH!!!!!!!!!!!!!!!!!!!!
 //postman needed
 
-exports.handler = function(event, context, callback) {
+exports.handler = (event, context, callback) => {
     const secretContent =
     `<h3 class="client-area__content_area_h3">Welcome To The Secret Area</h3>
     <p class="client-area__content_area_p"> You are right. LA is a city that is usually <strong>SUNNY!</strong> </p>
