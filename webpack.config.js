@@ -1,7 +1,6 @@
 // let cssConfig = {
 //..."css-loader?url=false"...
 //}
-
 //The part above is very important. 
 
 const webpack = require('webpack')
@@ -131,8 +130,6 @@ if (currentTask == 'dev') {
 }
 
 if (currentTask == 'build') {
-  console.log = function() {}
-
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   config.output = {
     filename: '[name].[chunkhash].js',
