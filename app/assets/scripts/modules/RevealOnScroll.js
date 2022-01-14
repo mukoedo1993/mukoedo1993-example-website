@@ -59,7 +59,7 @@ class RevealOnScroll {
                       //console.log(el.getBoundingClientRect().y) //what is getBoundingCLientRect
         // Answer: It measures how far the top edge of element div from the top edge of
         // browser's top viewport.
-
+        console.log(  this.thresholdPercent +": " + scrollPercent)
 
 
         if (scrollPercent < this.thresholdPercent ) { 
