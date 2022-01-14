@@ -1,0 +1,16 @@
+/*This is a deprecated legacy file*/
+/*It is completely removed since course 47th*/
+@define-mixin clearfix {
+    
+    &::after{
+        /*pseudo or fake content with CSS*/
+        /*LEC 26
+        This CSS selector will add this blank space after all of the content in the main
+        row div.
+        */
+        content:"";
+        clear:both;
+        display:table;
+    }
+
+}

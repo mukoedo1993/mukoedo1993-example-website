@@ -1,12 +1,6 @@
 .client-area {
     padding: 13px;
     text-align: center;
-    @mixin atLarge {
-        transform: translateX(0%) translateY(-20%);
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
 
     &__form-inner{
         display: grid;   
@@ -18,11 +12,10 @@
             grid-row-gap: 15px;
         }
         @mixin atLarge{
-            grid-column-gap: 45px;
+            grid-column-gap: 30px;
             grid-row-gap: 10px;
             grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
-            padding-bottom: 0;
-            margin-bottom: 0;
+          
         }
     }
 

@@ -79,9 +79,17 @@ class ClientArea {
     <input type="radio" id="scarlet" name="sky" value="scarlet" />
     <label for="scarlet">Scarlet</label>
    </div>
-   <div class="client-area__input-full-wdith">
-   <input value="submit" type="submit" class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted" />
-   </div>
+   <div class="client-area__input">
+   <input type="hidden" id="scarlet" name="sky" value="scarlet" />
+   <label for="scarlet"></label>
+  </div>
+  <div class="client-area__input">
+  <input value="submit" type="submit" class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted" />
+  </div>
+  <div class="client-area__input">
+  <input type="hidden" id="scarlet" name="sky" value="scarlet" />
+  <label for="scarlet"></label>
+ </div>
    </div>
  </form>
 
