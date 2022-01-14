@@ -64,7 +64,15 @@
 
       .site-header--dark & {
          transform: scale(.45) translateY(0.55rem);
+         background-color: $teal;
+         
       }
+    }
+    @mixin atLarge {
+      .site-header--dark & {
+        transform: scale(.35) rotate(50deg) translateY(5rem);
+       
+     }
     }
 
   }
