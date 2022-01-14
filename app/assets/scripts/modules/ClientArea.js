@@ -82,6 +82,7 @@ class ClientArea {
     <div class="client-area__input-full-wdith">
     <input value="submit" type="submit" class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted"></button>
     </div>
+    </div>
   </form>
  
   <div class="client-area__content-area client-area__after-correct-reveal"></div>
