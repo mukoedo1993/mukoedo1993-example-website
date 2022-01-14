@@ -47,6 +47,7 @@ class ClientArea {
         }).catch(
             (err) => {
               this.contentArea.innerHTML = `<h1 class="client-area__error">Please choose the <strong>CORRECT</strong> answer.</h1>`
+              window.scrollTo(0,document.body.scrollHeight)
               console.log(err)  
             })
         // post... a promise: we don't know how long it will take.
