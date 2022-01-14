@@ -11,7 +11,7 @@ class ClientArea {
 
         this.submitForm = document.querySelector("#form_serverless")
 
-        this.contentArea =document.querySelector(".client-area__content-area")
+        this.contentArea =document.querySelector(".client-area__after-correct-reveal")
 
         this.errorArea = document.querySelector(".err")
 
@@ -41,7 +41,7 @@ class ClientArea {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
             console.log(response.data)
             this.FormToDelete.remove()
-            this.ButtonToDelete.remove()
+            //this.ButtonToDelete.remove()
             this.contentArea.innerHTML = response.data
             // area div.
         }).catch(
@@ -84,7 +84,7 @@ class ClientArea {
     </div>
   </form>
  
-  <div class="client-area__content-area"></div>
+  <div class="client-area__content-area client-area__after-correct-reveal"></div>
   <div class="err" style="color: red;"></div>
  </div>
 </div>
