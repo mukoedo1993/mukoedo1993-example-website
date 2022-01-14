@@ -3,6 +3,8 @@
     text-align: center;
     @mixin atLarge {
         transform: translateX(0%) translateY(-20%);
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
 
@@ -18,13 +20,15 @@
         @mixin atLarge{
             grid-column-gap: 45px;
             grid-row-gap: 10px;
-            grid-template-columns: repeat(auto-fill,minmax(250px, 1fr))
+            grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
     }
 
     &__input-full-wdith {
         @mixin atLarge{
-       transform: translateX(20rem);
+       transform: translateX(115%);
         }
     }
    
@@ -32,8 +36,7 @@
     &__error {
         color: red;
         @mixin atLarge{
-          transform: translateY(3rem);
-          margin-bottom: 3rem;
+          margin-bottom: 0;
         }
     }
 
