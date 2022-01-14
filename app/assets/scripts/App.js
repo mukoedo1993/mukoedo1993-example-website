@@ -73,7 +73,7 @@ new ClientArea()
 new StickyHeader()
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 75) //made it work on
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 60)
-new RevealOnScroll(document.querySelectorAll(".picture--uppermost-2nd"), .58);
+new RevealOnScroll(document.querySelectorAll(".picture--uppermost-2nd"), .10);
 
 
 //let mobileMenu = //commented in course 57 // If your website is pretty complex, then you are recommended to download event-emitter...
