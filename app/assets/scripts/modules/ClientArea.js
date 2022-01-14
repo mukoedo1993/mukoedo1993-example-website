@@ -56,40 +56,40 @@ class ClientArea {
 
     injectHTML(){
       //Reference: https://stackoverflow.com/a/16515778/17340933
-        document.body.insertAdjacentHTML('beforeend', `
-        
+        document.body.insertAdjacentHTML('beforeend', 
+`
 <div class="client-area" id="quiz">
 <div class="wrapper wrapper--medium">
-  <h2 class="section-title section-title--blue">What is the most common sky color in LA?</h2>
-  <form class="client-area__form" action="" method="POST" id="form_serverless">
-   <div class="client-area__form-inner">
-    <div class="client-area__input">
-     <input type="radio" id="blue" name="sky" value="blue">
-     <label for="blue">Blue</label>
-    </div>
+ <h2 class="section-title section-title--blue">What is the most common sky color in LA?</h2>
+ <form class="client-area__form" action="" method="POST" id="form_serverless">
+  <div class="client-area__form-inner">
+   <div class="client-area__input">
+    <input type="radio" id="blue" name="sky" value="blue" />
+    <label for="blue">Blue</label>
+   </div>
 
-    <div class="client-area__input">
-     <input type="radio" id="teal" name="sky" value="teal">
-     <label for="teal">Teal</label>
-    </div>
+   <div class="client-area__input">
+    <input type="radio" id="teal" name="sky" value="teal" />
+    <label for="teal">Teal</label>
+   </div>
 
-    <input type="radio" name="sky" value="default_default_" style="display:none" checked/>
+   <input type="radio" name="sky" value="default_default_" style="display:none" checked />
 
-    <div class="client-area__input">
-     <input type="radio" id="scarlet" name="sky" value="scarlet">
-     <label for="scarlet">Scarlet</label>
-    </div>
-    <div class="client-area__input-full-wdith">
-    <input value="submit" type="submit" class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted"></button>
-    </div>
-    </div>
-  </form>
- 
-  <div class="client-area__content-area client-area__after-correct-reveal"></div>
-  <div class="err" style="color: red;"></div>
- </div>
+   <div class="client-area__input">
+    <input type="radio" id="scarlet" name="sky" value="scarlet" />
+    <label for="scarlet">Scarlet</label>
+   </div>
+   <div class="client-area__input-full-wdith">
+   <input value="submit" type="submit" class="btn btn--orange js-btn--orange-submit js-btn--orange-to-be-deleted" />
+   </div>
+   </div>
+ </form>
+
+ <div class="client-area__content-area client-area__after-correct-reveal"></div>
+ <div class="err" style="color: red;"></div>
 </div>
 </div>
+        
         `)
     }
 }
