@@ -14,10 +14,6 @@ this wrapper is a design pattern that keeps your texts away from two horizontal 
     &--medium {
      
     max-width: 976px;
-    @mixin atLarge {
-       transform: translateX(0%);
-       
-    }
    
    }
 
