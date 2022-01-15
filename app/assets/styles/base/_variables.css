@@ -5,3 +5,5 @@ $mainOrange: #d59541;
 $aubergine: rgb(71, 44, 76);
 
 $teal: rgb(0, 128, 128);
+
+$teal_transparent: rgba(0, 128, 128, .3);

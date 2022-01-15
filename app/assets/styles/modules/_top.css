@@ -1,0 +1,17 @@
+.top {
+    display:hidden;
+    @mixin atMedium{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: $teal_transparent;
+    color:black;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: ease-out .3s;
+  &:hover {
+    transform: rotate(20deg)
+  }
+    }
+}

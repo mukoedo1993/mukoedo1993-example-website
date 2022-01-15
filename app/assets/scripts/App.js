@@ -24,7 +24,7 @@ import ReactDOM from 'react-dom'
 import CopyRight from './modules/CopyRight'
 import FeatureItem from './modules/React/FeatureItem'
 
-
+import Top from "./modules/Top"
 /*
 * Render the copyright part.
 */
@@ -74,7 +74,7 @@ new StickyHeader()
 new RevealOnScroll(document.querySelectorAll(".feature-item"), 75) //made it work on
 new RevealOnScroll(document.querySelectorAll(".testimonial"), 60)
 new RevealOnScroll(document.querySelectorAll(".picture--uppermost-2nd"), .10);
-
+new Top()
 
 //let mobileMenu = //commented in course 57 // If your website is pretty complex, then you are recommended to download event-emitter...
 new MobileMenu();
