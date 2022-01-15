@@ -7,12 +7,12 @@ class Top{
 
     event() {
         this.top_back.addEventListener("click", () => this.go_top_back()) 
-        window.addEventListener("scroll", throttle(() => this.runOnScroll(), 500))
+        window.addEventListener("scroll", throttle(() => this.runOnScroll(), 1000))
         
     }
 
     go_top_back() {
-        console.log("Top.js")
+        //console.log("Top.js")
         window.scrollTo(0,0)
     }
 

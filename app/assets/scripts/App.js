@@ -25,6 +25,20 @@ import CopyRight from './modules/CopyRight'
 import FeatureItem from './modules/React/FeatureItem'
 
 import Top from "./modules/Top"
+import { isError } from 'lodash';
+
+/*
+* Get the data of stars of repo:
+*/
+const { Octokit } = require("@octokit/core")
+const octokit = new Octokit({auth: `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`}) //a read-only token
+const repoData = await octokit.request('GET /repos/{owner}/{repo}', {
+    owner: 'james-yoo',
+    repo: 'DBSCAN'
+  })
+  //console.log(repoData)   //For debug only
+
+
 /*
 * Render the copyright part.
 */
@@ -53,7 +67,7 @@ ReactDOM.render(<FeatureItem src={src_of_2nd_feature_item} title={title_of_2nd_f
 
 // third one: lower-left:
 const content_3rd_item =
-`I also have contributed to a popular <a href="https://en.wikipedia.org/wiki/DBSCAN" class="higurashi">DBSCAN </a>library in <a href="https://github.com/james-yoo/DBSCAN" class="higurashi">github</a>, which has 76 stars when I am writing this paragraph. I also developed a basic program to fetch stocks' data and a model to predict it.` 
+`I also have contributed to a popular <a href="https://en.wikipedia.org/wiki/DBSCAN" class="higurashi">DBSCAN </a>library in <a href="https://github.com/james-yoo/DBSCAN" class="higurashi">github</a>, which has ${repoData.data.stargazers_count} star${repoData.data.stargazers_count ==1? '':'s'} and ${repoData.data.forks_count} fork${repoData.data.forks_count == 1?'':'s'}. I also developed a basic program to fetch stocks' data and a model to predict it with my teammate.` 
 const title_of_3rd_feature_item = "Machine Learning"
 const src_of_3rd_feature_item = icon_dir + "wifi.svg"
 ReactDOM.render(<FeatureItem src={src_of_3rd_feature_item} title={title_of_3rd_feature_item} content={content_3rd_item}/>, featureItems[2])
@@ -92,7 +106,7 @@ document.querySelectorAll(".open-modal").forEach(el => {
 
                 setTimeout(() => modal.openTheModal(), 20) //let the browser wait for 20ms, wait for the browser to create a new object into the DOM.
             }
-            ).catch(() => console.log("There was a problem...")) // Once we have imported the Modal, we want to create a new instance of the class.
+            ).catch((err) => console.log(err)) // Once we have imported the Modal, we want to create a new instance of the class.
             //promise: LECTURE 57th
             //It might take thousands of ms to import the file...
             // If everything is well, then the function, then() we provide will get called. However, if there is a problem in the file, never load, such as an error, catch() will be run.

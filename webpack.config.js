@@ -94,6 +94,9 @@ const javascriptConfig =
       }
 
 const config = {
+  experiments: {
+    topLevelAwait: true,
+  },
   entry: './app/assets/scripts/App.js',
   plugins: pages,//course 62nd
   module: {

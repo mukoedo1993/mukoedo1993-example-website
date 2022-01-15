@@ -30,14 +30,14 @@ class RevealOnScroll {
         //However, notice that resize is not very efficient. It will fire up resize events many many times.
         // But we only need to let it to fire up at the end of resizing.
         window.addEventListener("resize", debounce(() => {
-            console.log("Resize just ran") // If we keep resizing, nothing will be printed on the console.
+            //console.log("Resize just ran") // If we keep resizing, nothing will be printed on the console.
             this.browserHeight = window.innerHeight // window.innerHeight: e.offsetTop: total page height  
         }, 333))
         }
 
 
     calcCaller() {
-            console.log("Scroll function ran")
+            //console.log("Scroll function ran")
             this.itemsToReveal.forEach(el => {
              if (el.isRevealed == false){ 
                  this.calculateIfScrolledTo(el)
@@ -54,12 +54,12 @@ class RevealOnScroll {
             // window.scrollY: how far away it is from the top of your page
             // el.offsetTop: 
 
-        console.log("Element was calculated")
+        //console.log("Element was calculated")
         let scrollPercent = (el.getBoundingClientRect().y / this.browserHeight) * 100
                       //console.log(el.getBoundingClientRect().y) //what is getBoundingCLientRect
         // Answer: It measures how far the top edge of element div from the top edge of
         // browser's top viewport.
-        console.log(  this.thresholdPercent +": " + scrollPercent)
+        //console.log(  this.thresholdPercent +": " + scrollPercent)
 
 
         if (scrollPercent < this.thresholdPercent ) { 

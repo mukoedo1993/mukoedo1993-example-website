@@ -36,10 +36,10 @@ class ClientArea {
     sendRequest() {// post(target url, password object)
         // because of cross network resource sharing, this network process will not work through.
         this.form = Array.from(document.getElementsByName("sky")).find(r => r.checked).value;
-        console.log(this.form)
+        //console.log(this.form)
         Axios.post('https://stupefied-spence-c25693.netlify.app/.netlify/functions/secret-area', {password: this.form}).then(response => {
             // If user provides correct password, we could delete the form from the page, and also insert the secret content into that content
-            console.log(response.data)
+            //console.log(response.data)
             this.FormToDelete.remove()
             //this.ButtonToDelete.remove()
             this.contentArea.innerHTML = response.data
@@ -48,7 +48,7 @@ class ClientArea {
             (err) => {
               this.contentArea.innerHTML = `<h1 class="client-area__error">Please choose the <strong>CORRECT</strong> answer.</h1>`
               window.scrollTo(0,document.body.scrollHeight)
-              console.log(err)  
+              //console.log(err)  
             })
         // post... a promise: we don't know how long it will take.
         //then(): function if everything is well
