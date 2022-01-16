@@ -40,7 +40,7 @@ class RevealOnScroll {
             //console.log("Scroll function ran")
             this.itemsToReveal.forEach(el => {
              if (el.isRevealed == false){ 
-                 this.calculateIfScrolledTo(el)
+                 this.calculateIfScrolledTo(el) //To determine whether or not we will reveal it
              }
             })
     }

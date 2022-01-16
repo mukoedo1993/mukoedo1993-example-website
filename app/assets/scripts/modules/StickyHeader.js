@@ -64,8 +64,10 @@ class StickyHeader{
                 if (scrollPercent < 18 && scrollPercent > -0.1 && this.scrollDirection == 'down' ||
                 scrollPercent < 33 && this.scrollDirection == 'up'){
                     let matchingLink = el.getAttribute("data-matching-link")//css-like selector
-
-                    document.querySelectorAll(`.primary-nav a:not(${matchingLink})`).forEach(el => el.classList.remove("is-current-link"))
+                    //console.log("matching link is: " + matchingLink)
+                    document.querySelectorAll(`.primary-nav a:not(${matchingLink})`).forEach(el => {//console.log(el.classList.contains("is-current-link") + el.tagName)
+                                  el.classList.remove("is-current-link")                                                                  
+                })
                     document.querySelector(matchingLink).classList.add("is-current-link")
 
                     //any time we made an active link, we wanted to remove former links.
