@@ -7,7 +7,7 @@
     /*end of course 56*/
 
 
-    position: fixed;/*so, fixed will make the modal element to take the entire screen.*/
+    position: fixed;/*so, fixed will make the modal element to take the entire screen, with top, bottom, left and right values all set to zero. */
     top: 0;
     bottom: 0;
     left: 0;
@@ -41,6 +41,7 @@
         text-align: center;
         font-size: 1.3rem;
         font-weight: 300;
+        color: $teal;
     }
 
 
@@ -53,9 +54,11 @@
         transform-origin: 100% 0;
         cursor: pointer; /*So it looks like a link when you hover over it...*/
         color: $teal;
+        transition: .3s ease-in-out;
 
         &:hover {
-            color: $mainOrange;
+            color: $higurashi;
+            transform: rotate(-3deg) scaleX(1.3)
         }
     }
 }

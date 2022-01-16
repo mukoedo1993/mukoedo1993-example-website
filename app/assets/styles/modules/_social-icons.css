@@ -5,7 +5,7 @@
     &__icon{
         background-color: $mainOrange;
         display: inline-block;
-        width: 33%; /*for tiny screen, we got two icons for per row. */
+        width: 100px; /*for tiny screen, we got two icons for per row. */
         height: 72px;
         margin: 0 5px 5px 5px;
         position: relative;
@@ -13,6 +13,7 @@
 
         @mixin atSmall {
             width: 72px;
+            height: 72px;
         }
 
 

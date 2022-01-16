@@ -1,6 +1,6 @@
 /*The red color for higurashi when they <div style="color: red;">CRY</div>*/
 .higurashi{
-color: #8f1d21;
+color: $higurashi;
 text-decoration: none;
 }
 
