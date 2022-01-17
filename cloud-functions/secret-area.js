@@ -19,7 +19,7 @@
 //postman needed
 
 exports.handler = (event, context, callback) => {
-    const headers = {
+    const headers = {   //headers here is important to detour the CORS for local debugging
         "Access-Control-Allow-Origin" : "*",
         "Access-Control-Allow-Headers" : "Content-Type"
       }
