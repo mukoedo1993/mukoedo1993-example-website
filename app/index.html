@@ -53,15 +53,15 @@
 
     <!--art direction here-->
     <picture>
-      <source srcset="assets/images/sky.jpg 1920w,
+      <source data-srcset="assets/images/sky.jpg 1920w,
     assets/images/sky.jpg 3840w" media="(min-width: 1010px)">
-      <source srcset="assets/images/sky.jpg 1380w,
+      <source data-srcset="assets/images/sky.jpg 1380w,
     assets/images/sky.jpg 2760w" media="(min-width: 800px)">
-      <source srcset="assets/images/sky-small.jpg 990w,
+      <source data-srcset="assets/images/sky-small.jpg 990w,
     assets/images/sky-small.jpg 1980w" media="(min-width: 530px)">
-      <img srcset="assets/images/sky-small.jpg 640w,
+      <img data-srcset="assets/images/sky-small.jpg 640w,
     assets/images/sky-small.jpg 1280w" alt="Coastal views of oceans and mountains"
-        class="large-hero__image">
+        class="lazyload large-hero__image">
     </picture>
     <!--different browsers used different crops to different screen sizes.
   And at each crop, it can see different api version if necessary.-->
@@ -101,11 +101,11 @@
         </strong> website, I always try my best to learn and use best and newest technologies to serve my clients.
       </h3>
 
-      <div class="wrapper wrapper--medium wrapper--b-margin lazyload">
+      <div class="wrapper wrapper--medium wrapper--b-margin">
         <!--For the screen size smaller than 970px, we do not force the browser to accept the size.-->
         <picture class="picture--uppermost">
-        <source srcset="assets/images/wide-flower.png" media="(min-width: 800px)">
-        <img srcset="assets/images/flowers.jpg" alt="Street full with flowers">
+        <source data-srcset="assets/images/wide-flower.png" media="(min-width: 800px)">
+        <img data-srcset="assets/images/flowers.jpg" alt="Street full with flowers" class="lazyload">
         </picture>
         <!--
           But, remember, once you load a higher resolution version of an image, the browser will keep it even

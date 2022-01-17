@@ -143,7 +143,8 @@ if (currentTask == 'build') {
   config.optimization = {
     splitChunks: {chunks: 'all'},
     minimize: true,
-    minimizer: [`...`, new CssMinimizerPlugin()]
+    minimizer: [`...`, new CssMinimizerPlugin()]  //...: default optimizer. It means that except default optimizer, we also want css
+    //-minimizer-plugin
   }
 
   config.plugins.push(new CleanWebpackPlugin(), new MiniCssExtractPlugin({filename: 'styles.[chunkhash].css'}),

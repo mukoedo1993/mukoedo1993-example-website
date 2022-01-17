@@ -104,7 +104,7 @@ document.querySelectorAll(".open-modal").forEach(el => {
             import(/* webpackChunkName: "modal" */'./modules/Modal.js').then( x => {
                 modal = new x.default() //default: (alias) new Modal(): Modal
 
-                setTimeout(() => modal.openTheModal(), 20) //let the browser wait for 20ms, wait for the browser to create a new object into the DOM.
+                setTimeout(() => modal.openTheModal(), 20) //let the browser wait for 20ms, wait for the browser to create a new object and inject new HTML into the DOM.
             }
             ).catch((err) => console.log(err)) // Once we have imported the Modal, we want to create a new instance of the class.
             //promise: LECTURE 57th
