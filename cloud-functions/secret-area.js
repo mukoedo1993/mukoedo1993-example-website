@@ -19,6 +19,20 @@
 //postman needed
 
 exports.handler = (event, context, callback) => {
+    const headers = {
+        "Access-Control-Allow-Origin" : "*",
+        "Access-Control-Allow-Headers" : "Content-Type"
+      }
+
+      if (event.httpMethod !== "POST") {
+        return callback(null, {
+          statusCode: 200,
+          headers,
+          body: "This was not a POST request"
+        })
+      }
+      
+
     const secretContent =
     `<h3 class="client-area__content_area_h3">Welcome To The Secret Area</h3>
     <p class="client-area__content_area_p"> You are right. LA is a city that is usually <strong>SUNNY!</strong> </p>
@@ -35,12 +49,14 @@ exports.handler = (event, context, callback) => {
     if (body.password == "blue") {
         callback(null, {
             statusCode: 200 , //200: success 404:not found
+            headers,
             body: secretContent
         })
     }
     else {
         callback(null, {
             statusCode: 401 , //401: unauthorized
+            headers
         })
     }
 
