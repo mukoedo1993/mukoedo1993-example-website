@@ -56,20 +56,20 @@ const content_of_1st_feature_item = `You can search and read our university's ev
               interact with our professors. And, if you love animals, you could even check our university's pet system.
                Please <a href="https://mukoedo.com" class="higurashi">explore!</a>`
 const title_of_1st_feature_item = "A fictional university"
-const src_of_1st_feature_item = icon_dir + "university.svg"
+const src_of_1st_feature_item = icon_dir + "university.png"
 ReactDOM.render(<FeatureItem src={src_of_1st_feature_item} title={title_of_1st_feature_item} content={content_of_1st_feature_item}/>, featureItems[0])
 
 // second one: lower-left:
 const content_2nd_item = `It is a cool website you are viewing now based on the <a href="https://en.wikipedia.org/wiki/Responsive_web_design" class="higurashi">concept of responsive design</a>. Not only that, I but also applied React for the copyright part, not to mention the serverless netlify function for the interesting <a href="#quiz" class="higurashi">quiz</a>.`
 const title_of_2nd_feature_item = "This Website"
-const src_of_2nd_feature_item = icon_dir + "globe.svg"
+const src_of_2nd_feature_item = icon_dir + "earth.png"
 ReactDOM.render(<FeatureItem src={src_of_2nd_feature_item} title={title_of_2nd_feature_item} content={content_2nd_item}/>, featureItems[1])
 
 // third one: lower-left:
 const content_3rd_item =
 `I also have contributed to a popular <a href="https://en.wikipedia.org/wiki/DBSCAN" class="higurashi">DBSCAN </a>library in <a href="https://github.com/james-yoo/DBSCAN" class="higurashi">github</a>, which has ${repoData.data.stargazers_count} star${repoData.data.stargazers_count ==1? '':'s'} and ${repoData.data.forks_count} fork${repoData.data.forks_count == 1?'':'s'}. I also developed a basic program to fetch stocks' data and a model to predict it with my teammate.` 
 const title_of_3rd_feature_item = "Machine Learning"
-const src_of_3rd_feature_item = icon_dir + "wifi.svg"
+const src_of_3rd_feature_item = icon_dir + "robot(3).png"
 ReactDOM.render(<FeatureItem src={src_of_3rd_feature_item} title={title_of_3rd_feature_item} content={content_3rd_item}/>, featureItems[2])
 
 // fourth one: lower-right: 
@@ -77,7 +77,7 @@ ReactDOM.render(<FeatureItem src={src_of_3rd_feature_item} title={title_of_3rd_f
 const content_4th_item = 
 `I developed a simple app for social network, named <a href="http://shaberu.herokuapp.com/" class="higurashi">shaberu(しゃべる)</a>, which roughly means talking in Japanese. You could not only post and search, but also chat with other people here.`
 const title_of_4th_feature_item = "Shaberu"
-const src_of_4th_feature_item = icon_dir + "fire.svg"
+const src_of_4th_feature_item = icon_dir + "talking-square.png"
 ReactDOM.render(<FeatureItem src={src_of_4th_feature_item} title={title_of_4th_feature_item} content={content_4th_item}/>, featureItems[3])
 
 new ClientArea()
