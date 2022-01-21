@@ -37,13 +37,14 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: .6rem;
+        
 
         @mixin atSmall {
 
             /*It will push the icon down 8 pixels.*/
             position: relative;
             top: 8px;
-
+          
 
 
 

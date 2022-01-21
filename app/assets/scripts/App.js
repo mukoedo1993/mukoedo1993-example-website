@@ -21,7 +21,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 //import React components that we created
-import CopyRight from './modules/CopyRight'
+import CopyRight from './modules/React/CopyRight'
 import FeatureItem from './modules/React/FeatureItem'
 
 import Top from "./modules/Top"

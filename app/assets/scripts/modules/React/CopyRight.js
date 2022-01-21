@@ -10,7 +10,7 @@ function CopyRight() {
         <div className="wrapper">
           <p>
             <span className="site-footer__text">
-              Copyright &copy; 2021 ~ {getYear_helper()} Tom Kimi, an ambituous programmer. All rights NOT reserved.
+               &copy;{getYear_helper()} Inspired and highly influenced by <a href="http://schiffwebdesign.com/"> Brad Schiff</a>
             </span>
             <a href="#" className="btn btn__orange open-modal">Get in Touch</a>
           </p>
