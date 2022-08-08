@@ -1,5 +1,4 @@
 .top {
-    display: hidden !important;
  
     @mixin atMedium{
     font-weight: 400;

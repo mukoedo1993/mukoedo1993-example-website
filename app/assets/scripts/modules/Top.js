@@ -25,7 +25,6 @@ class Top{
             this.top_back.innerHTML = 'Return to the top'
         if(window.scrollY > 400){
             this.top_back.classList.remove("top__hidden")
-            console.log(window.innerWidth)
         } else {
             this.top_back.classList.add("top__hidden")
         }
