@@ -1,5 +1,5 @@
 .top {
-    display:hidden;
+ 
     @mixin atMedium{
     font-weight: 400;
     
@@ -26,4 +26,5 @@
   }
   
     }
+
 }
