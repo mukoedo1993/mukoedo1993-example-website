@@ -56,7 +56,7 @@ class Modal {
         document.body.insertAdjacentHTML('beforeend',`
         <div class="modal">
         <div class="modal__inner">
-          <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Get in <strong>Touch</strong></h2>
+          <h2 class="section-title section-title--blue section-title--less-margin"><a href="mailto:zwang2@wvstateu.edu "><img src="assets/images/icons/mail.svg" class="section-title__icon"></a> Get in <strong>Touch</strong></h2>
           <div class="wrapper wrapper--narrow">
             <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>
           </div>
