@@ -4,6 +4,7 @@ import '../styles/styles.css'
 
 import 'lazysizes'
 
+
 import { Markup } from 'interweave';
 
 import MobileMenu from './modules/MobileMenu'
@@ -27,17 +28,31 @@ import FeatureItem from './modules/React/FeatureItem'
 import Top from "./modules/Top"
 import { isError } from 'lodash';
 
+import CodeIcon from "./modules/CodeIcon"
 /*
 * Get the data of stars of repo:
 */
+//import githubApi from "./modules/githubApi"
+//const githubApiInstance = new githubApi()
+//githubApiInstance.init()
+
 const { Octokit } = require("@octokit/core")
 const octokit = new Octokit({auth: `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`}) //a read-only token
-const repoData = await octokit.request('GET /repos/{owner}/{repo}', {
+const repoData = 
+await
+octokit.request('GET /repos/{owner}/{repo}', {
     owner: 'james-yoo',
     repo: 'DBSCAN'
   })
+  
+  
   //console.log(repoData)   //For debug only
 
+
+  /*
+  * add a hyperlink to a random page on the codeIcon icon on the top of our code.
+  */
+  new CodeIcon()
 
 /*
 * Render the copyright part.
