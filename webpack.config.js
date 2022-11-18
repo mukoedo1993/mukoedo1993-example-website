@@ -1,17 +1,39 @@
+
 // let cssConfig = {
 //..."css-loader?url=false"...
 //}
 //The part above is very important. 
 
 const webpack = require('webpack')
+
 const currentTask = process.env.npm_lifecycle_event //  the npm_lifecycle_event environment variable is set to whichever stage of the cycle is being executed. 
 //https://docs.npmjs.com/cli/v8/using-npm/scripts
+
 const path = require('path') //The path module provides utilities for working with file and directory paths. 
 //https://nodejs.org/api/path.html
+
+
 const {CleanWebpackPlugin} = require('clean-webpack-plugin') //A webpack plugin to remove/clean your build folder(s).
 //https://github.com/johnagan/clean-webpack-plugin
+/*
+* By default, this plugin will remove all files inside webpack's output.path directory, as well as all unused webpack assets after every successful rebuild.
+*/
+
+
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') //https://webpack.js.org/plugins/mini-css-extract-plugin/
+/*
+*This plugin extracts CSS into separate files. It creates a CSS file per JS file 
+*which contains CSS. It supports On-Demand-Loading of CSS and SourceMaps.
+*/
+
+
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin') //https://webpack.js.org/plugins/css-minimizer-webpack-plugin/#root
+/*
+* Use CSS nano to minimize your css
+*/
+
+
 const HtmlWebpackPlugin = require('html-webpack-plugin') //https://webpack.js.org/plugins/html-webpack-plugin/#root
 /*
 The plugin will generate an HTML5 file for you that includes all your webpack bundles in the body using script tags.
@@ -56,12 +78,13 @@ class RunAfterCompile{
 
 const cssConfig = {
   test: /\.css$/i,    //case insensitive
-  use: ["css-loader?url=false", { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }]
+  use: ["css-loader?url=false",
+   { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }]
 }
 
 const pages = fse.readdirSync('./app').filter( function(file) {
   return file.endsWith('.html')
-}).map(function(page) {
+}).map((page) => {
   return new HtmlWebpackPlugin({
     filename: page,
     template: `./app/${page}`
