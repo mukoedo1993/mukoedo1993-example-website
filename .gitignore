@@ -1,4 +1,3 @@
 node_modules/
-docs/
 ./package-lock.json
 app/assets/scripts/modules/React/tst.js
